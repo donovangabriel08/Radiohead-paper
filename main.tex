@@ -1,0 +1,104 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{textcomp}
+\usepackage{enumitem}
+
+\title{A Quantitative Analysis on High Percentile Radiohead Listeners}
+\author{@vanvanvansahur}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+Radiohead was formed in Abingdon, Oxfordshire, England, in 1985. Since their debut commercial release, "Drill EP," they have amassed over 47 million monthly listeners on Spotify alone, as of October 2026. Naturally, as with any metric, their listener count is a hierarchy. 
+
+TikTok larpers dilute the vast majority of new-wave Radiohead listeners, infecting the listening pool, and inflating their numbers with artificial listeners whose Radiohead palate consists of ``Creep'' and the occasional ``No Surprises.'' These facetious larpers are bad enough as is, but they are far more innocuous than the Radiohead elitists---the people whose favorite Radiohead song is a 14-second deleted clip of Thom Yorke humming; the people who refuse to listen to any Radiohead song over 10 million listens; the people who listen to Radiohead more than Thom Yorke's real relatives have been in his presence.
+
+Operating as an analysis of Radiohead elitism, this paper hopes to quantitatively determine the final claim of the last paragraph: whether a top 0.1\% listener really listens to Radiohead more than Thom Yorke spends time with his family. Specifically, whether a top 0.1\% listener has listened to Radiohead more than Thom Yorke has spent time with his biological brother, Andrew Yorke.
+
+\section{Analysis}
+
+\subsection{Identifying Key Metrics}
+
+The main two metrics that need to be quantified are how much time Yorke will spend with his brother over his entire life, and how percentages of that time is subdivided between sections of his life. By determining both of these, we can derive the time Thom has spent with his brother Andrew at any point in his life, allowing us to compare that figure to different echelons of Radiohead obsession and their respective listening times. 
+
+\subsection{Estimating Aggregate Family Time}
+
+After Andrew was born, we assume Thom and Andrew spent $\sim$2.5 hours a day together for fifteen years straight, if you average out the high amounts of time spent together as babies and much lower amounts of time spent together as adolescents [1]. Taking $i$ to be aggregate time spent together in hours and $Y_T$ to be Thom's age in years, it follows that
+
+\begin{enumerate}
+    \item $15$ \text{years} $\times$ 365 $\frac{\text{days}}{\text{year}}$
+    $\times$ $2.5$ $\frac{\text{hours}}{\text{day}}$ = 13,687.5 \\
+    \item $i$ $\approx$ $13700$ \text{hours} for $Y_T < 18$
+\end{enumerate} 
+
+However, this figure only calculates the total amount of time Thom has spent with his brother during the first eighteen years of his life, neglecting the other years and years of birthdays, reunions, dinners, so on and so forth. By using a projection by Tim Urban [2] that takes a conservative 90 year lifespan and considers how people generally move out at 18, we can say that you have spent around $90\%$ of the total time you will spend with your siblings, parents, etc, by age 18. Using this figure, we find that
+
+\begin{enumerate}
+    \item $i_{tot}$ = $\frac{i}{90\%}$ \\
+    \item $i_{tot}$ = $15222.2\overline{2}$ \\
+    \item $i_{tot}$ $\approx$ 15200 \text{hours}
+\end{enumerate}
+
+\subsection{Expansion on the Distribution of Aggregate Family Time}
+Assuming a linear distribution $\rho$ of time spent with family throughout the final years of Thom's life after 18, we arrive at
+
+\[
+\rho_{\text{adult}} = \frac{i_{tot} \text{ hours} - i  \text{ hours}}{90 \text{ years}-18\text{ years}} \approx 21 \text{ hours/year}
+\]
+
+for time spent with his brother per year at and after turning 18. However, we also need the distribution prior to age 18. Because Thom is 3 years older than Andrew, they have 15 years of co-habituation. So
+
+\[
+\rho_{\text{child}} =
+\begin{cases}
+    0 & \text{if } 0\le Y_T < 3 \\
+    \frac{13700 \text{ hours}}{15\text{ years}} \approx 910 \text{ hours/year} & \text{if } 3 \le Y_T < 18
+\end{cases}
+\]
+
+Now that we have established the time-spent density as $\rho_{\text{child}}$ and $\rho_{\text{adult}}$, we can finally define a piecewise function that finds the estimated amount of time Andrew and Thom have spent together for each year of Thom's life.
+
+\[
+\text{Aggregate Time} = 
+\begin{cases}
+\rho_{child} \times  (Y_T-3)& \text{if } Y_T< 18 \\
+13700 + \rho_{adult} \times (Y_T-18) & \text{if }  Y_T\ge 18
+\end{cases}
+\]
+where $Y_T$ represents the age of Thom.
+
+\subsection{Direct Comparison of Time}
+Now that we have a piecewise function defined for aggregate family time for all years in Thom's life, we can cross-reference that figure with listening times of high percentile Radiohead listeners. We will use my own Radiohead listening time, via Stats.Fm. I have listened to Radiohead for 40,113 minutes as of October 2026, which equates to $\sim$670 hours. Additionally, for the past two years, I have been placed in the top 0.1\% of Radiohead listeners, so I feel my lifetime stats are justifiably used as accurate for a high percentile Radiohead listener. To find my equivalently aged Andrew, we get
+
+\begin{enumerate}
+    \item $670$ = \text{Aggregate Time} = $\rho_{\text{child}} \times (Y_T-3)$  
+    \item $670$ = $\frac{13700}{15}$ $\times$ $(Y_T-3)$
+    \item $Y_T-3=Y_A$ \text{(converting from Thom's age to Andrew's)}
+    \item $Y_A=0.734$
+    
+\end{enumerate}
+
+where $Y_A$ represents Andrew's age in years. 
+
+\subsection{Conclusion}
+Even when you take a 99.9th percentile Radiohead elitist listener, they have only listened to Thom as much as 9 month old Andrew has spent time with him. However, it should be kept in mind that these calculations are heavily approximate; it would be impossible to determine how much time Thom has truly spent with Andrew over their entire lives, much less to know that figure at any point in Thom's life. In addition, the 2.5 hour figure is heavily speculative, but I attempted to ground it in real research. This paper aimed to estimate this value and cross reference it with time listened for a high percentile Radiohead listener, as well as provide a function that allows someone to see how much aggregate time Andrew and Thom have spent together at any point in Thom's life, given Thom lives to 90 years old (and all other key assumptions). Thank you for reading!
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{sample}
+
+\end{document}
