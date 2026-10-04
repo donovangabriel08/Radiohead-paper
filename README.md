@@ -1,5 +1,12 @@
 # Radiohead-paper
-Mock paper written over Radiohead to learn LaTeX. Core idea of the paper is to calculate whether 99.9th percentile Radiohead listeners (in time listened) can compete with Andrew (Thom Yorke's brother) in time spent with Thom
-Took around ~5 hours, no this is not AI slop (You can probably tell by the .tex and core mathematics because its very inefficient) 
-Plan to add a program to this in the future where you can enter your Radiohead listening time and you get your equivalently aged Andrew outputted back to you
-This was a fun project overall and cool to learn LaTeX, its very intuitive
+A mock paper written over Radiohead to learn LaTeX. 
+
+### Premise 
+Can a 99.9th percentile Radiohead listener (by total minutes streamed) compete with Andrew (Thom Yorke's brother) in time spent with Thom?
+
+### Notes
+- **Time spent:** ~5 hours, used a template on Overleaf to get started
+- **Human-made:** Not AI slop to just linkedin-maxx, I genuinely wanted to learn LaTeX so I came up with this
+- **Future plan:** Adding a simple program to this where you can add your Radiohead listening stats and get your personal equivalent Andrew Yorke age
+
+Overall this was a fun project to learn LaTeX, and thank you a lot if you take the time to read it.
